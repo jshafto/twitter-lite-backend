@@ -15,7 +15,7 @@ A lightweight Twitter API using Express, Sequelize, and Postbird.
 
 ## Project Status
 - [x] Set up tweet model
-- [ ] Set up test routes
+- [x] Set up test routes
 - [ ] Set up tweet routes
 - [ ] Render tweets in frontend application
 - [ ] Add the users model
