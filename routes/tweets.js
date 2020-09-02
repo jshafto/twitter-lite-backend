@@ -3,7 +3,8 @@ const db = require('../db/models')
 const { check, validationResult } = require('express-validator');
 const router = express.Router();
 const { Tweet } = db;
-const asyncHandler = handler => (req, res, next) => handler(req, res, next).catch(next);
+const {asyncHandler, handleValidationErrors} = require("../utils");
+
 
 const tweetNotFoundError = (tweetId) => {
     const err = Error(`Tweet with id ${tweetId} ain't hurr.`)
@@ -20,18 +21,6 @@ const tweetValidator = [
         .withMessage('Tweet message must be fewer than 280 characters')
 ]
 
-const handleValidationErrors = (req, res, next) => {
-    const validationErrors = validationResult(req);
-    if (!validationErrors.isEmpty()) {
-        const errors = validationErrors.array().map((error) => error.msg);
-        const err = Error("Bad request.");
-        err.errors = errors;
-        err.status = 400;
-        err.title = "Bad request.";
-        next(err);
-    }
-    next();
-}
 
 router.get("/", asyncHandler(async (req, res) => {
   const tweets = await Tweet.findAll();

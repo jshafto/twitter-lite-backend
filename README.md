@@ -2,20 +2,25 @@
 Completed as part of the App Academy curriculum. Implementation by Juliet Shafto and Darius Freeman.
 
 ## Project Description
-A lightweight Twitter API using Express, Sequelize, and Postbird.
+A lightweight Twitter API backend using Express, Sequelize, and Postbird.
 
 ## Features
-- A default "/" GET route.
-- A "/tweets" GET route to fetch an index of tweets.
-- A "/tweets" POST route to create tweets.
-- A "/tweets/:id" PUT route to update tweets.
-- A "/tweets/:id" DELETE route to delete tweets.
+- Load existing tweets, create tweets, and delete tweets
+- Edit tweets—not even twitter can do that!!
 - A backend API that connects to a simple frontend server.
 - A Users model.
 
 ## Project Status
-- [x] Set up tweet model
-- [x] Set up test routes
-- [X] Set up tweet routes
-- [X] Render tweets in frontend application
-- [x] Add the users model
+- Tweet storage and models
+    - [x] Set up tweet model
+    - [x] Set up test routes
+    - [X] Set up tweet routes
+    - [X] Render tweets in frontend application
+    - [x] Add the users model
+- User accounts and authentication
+    - [X] Users routes
+    - [ ] Protected tweet resources
+    - [ ] User registration
+    - [ ] User log-in
+    - [ ] Authenticated tweet creation
+    - [ ] A form to create tweets
