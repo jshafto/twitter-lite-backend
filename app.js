@@ -14,9 +14,7 @@ app.use(express.json());
 app.use('/', indexRouter);
 app.use('/tweets', tweetsRouter);
 
-app.get("/", (req, res) => {
-  res.send("Welcome to the express-sequelize-starter!");
-});
+
 
 // Catch unhandled requests and forward to error handler.
 app.use((req, res, next) => {
@@ -34,6 +32,7 @@ app.use((err, req, res, next) => {
   res.json({
     title: err.title || "Server Error",
     message: err.message,
+    errors: err.errors,
     stack: isProduction ? null : err.stack,
   });
 });
