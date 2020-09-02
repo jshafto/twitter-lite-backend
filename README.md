@@ -19,7 +19,7 @@ A lightweight Twitter API backend using Express, Sequelize, and Postbird.
     - [x] Add the users model
 - User accounts and authentication
     - [X] Users routes
-    - [ ] Protected tweet resources
+    - [X] Protected tweet resources
     - [ ] User registration
     - [ ] User log-in
     - [ ] Authenticated tweet creation

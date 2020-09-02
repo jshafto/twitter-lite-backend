@@ -4,7 +4,7 @@ const { check, validationResult } = require('express-validator');
 const router = express.Router();
 const { Tweet } = db;
 const {asyncHandler, handleValidationErrors} = require("../utils");
-
+const { requireAuth } = require('../auth')
 
 const tweetNotFoundError = (tweetId) => {
     const err = Error(`Tweet with id ${tweetId} ain't hurr.`)
@@ -20,6 +20,8 @@ const tweetValidator = [
         .isLength({max: 280})
         .withMessage('Tweet message must be fewer than 280 characters')
 ]
+
+router.use(requireAuth);
 
 
 router.get("/", asyncHandler(async (req, res) => {
