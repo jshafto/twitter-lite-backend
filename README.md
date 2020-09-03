@@ -25,3 +25,5 @@ A lightweight Twitter API backend using Express, Sequelize, and Postbird. Projec
     - [x] Authenticated tweet creation
     - [x] A form to create tweets
     - [x] Profile page
+- Bonus:
+    - [x] Delete tweets
