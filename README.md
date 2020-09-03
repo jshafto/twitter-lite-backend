@@ -2,7 +2,7 @@
 Completed as part of the App Academy curriculum. Implementation by Juliet Shafto and Darius Freeman.
 
 ## Project Description
-A lightweight Twitter API backend using Express, Sequelize, and Postbird.
+A lightweight Twitter API backend using Express, Sequelize, and Postbird. Project frontend [here](https://github.com/jshafto/twitter-lite-frontend).
 
 ## Features
 - Load existing tweets, create tweets, and delete tweets
@@ -20,7 +20,7 @@ A lightweight Twitter API backend using Express, Sequelize, and Postbird.
 - User accounts and authentication
     - [X] Users routes
     - [X] Protected tweet resources
-    - [ ] User registration
+    - [x] User registration
     - [ ] User log-in
     - [ ] Authenticated tweet creation
     - [ ] A form to create tweets
