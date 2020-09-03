@@ -14,13 +14,13 @@ A lightweight Twitter API backend using Express, Sequelize, and Postbird. Projec
 - Tweet storage and models
     - [x] Set up tweet model
     - [x] Set up test routes
-    - [X] Set up tweet routes
-    - [X] Render tweets in frontend application
+    - [x] Set up tweet routes
+    - [x] Render tweets in frontend application
     - [x] Add the users model
 - User accounts and authentication
-    - [X] Users routes
-    - [X] Protected tweet resources
+    - [x] Users routes
+    - [x] Protected tweet resources
     - [x] User registration
     - [x] User log-in
-    - [ ] Authenticated tweet creation
+    - [x] Authenticated tweet creation
     - [ ] A form to create tweets

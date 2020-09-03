@@ -25,7 +25,11 @@ router.use(requireAuth);
 
 
 router.get("/", asyncHandler(async (req, res) => {
-  const tweets = await Tweet.findAll();
+  const tweets = await Tweet.findAll({
+    include: [{ model: User, as: "user", attributes: ["username"] }],
+    order: [["createdAt", "DESC"]],
+    attributes: ["message"],
+  });
   res.json({tweets});
 }));
 
@@ -43,7 +47,7 @@ router.get("/:id(\\d+)", asyncHandler(async(req, res, next)=>{
 
 router.post('/', tweetValidator, handleValidationErrors, asyncHandler(async (req, res) => {
   const { message } = req.body;
-  const tweet = await Tweet.create({message});
+  const tweet = await Tweet.create({ message, userId: req.user.id });
   res.json({tweet});
 }))
 
